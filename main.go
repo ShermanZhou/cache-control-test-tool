@@ -69,7 +69,7 @@ func Get(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		return
 	}
 	//server will issue 'using cache' based on etag
-	if tagClient == "abcdefg" {
+	if false && tagClient == "abcdefg" {
 		w.WriteHeader(http.StatusNotModified)
 		log.Println("log: Send 304 due etag unchanged")
 		return
